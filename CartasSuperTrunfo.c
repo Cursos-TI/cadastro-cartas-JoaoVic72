@@ -63,6 +63,10 @@ scanf("%d", &pontosturisticos2);
 float densidade2 = (float) populacao2 / Area2;
 float PPC2 = (float) PIB2 / populacao2;
 
+//Cálculo do Super Poder
+float superpoder = (float) populacao + Area + PIB + pontosturisticos + PPC - densidade1;
+float superpoder2 = (float) populacao2 + Area2 + PIB2 + pontosturisticos2 + PPC2 - densidade2;
+
 // Área para exibição dos dados da cidade
 //Carta 1
 printf("Carta 1: \n Estado: %s \n ",Estado1);
@@ -72,8 +76,10 @@ printf("População: %d \n", populacao);
 printf("Área: %f \n", Area);
 printf("PIB: %f \n", PIB);
 printf("Número de Pontos Turísticos: %d \n", pontosturisticos);
-printf("O PIB per capta é de: %f \n", PPC);
-printf("A Densidade populacional é de: %f \n", densidade1);
+printf("O PIB per capta é de: %.2f \n", PPC);
+printf("A Densidade populacional é de: %.2f \n", densidade1);
+printf("O Super Poder da Cidade é de: %.2f \n", superpoder);
+
 //Carta 2
 printf("Carta 2: \n Estado: %s \n ",Estado2);
 printf("Código: %s \n", Codcarta2);
@@ -82,8 +88,19 @@ printf("População: %d \n", populacao2);
 printf("Área: %f \n", Area2);
 printf("PIB: %f \n", PIB2);
 printf("Número de Pontos Turísticos: %d \n", pontosturisticos2);
-printf("O PIB per capta é de: %f \n", PPC2);
-printf("A Densidade populacional é de: %f \n", densidade2);
+printf("O PIB per capta é de: %.2f \n", PPC2);
+printf("A Densidade populacional é de: %.2f \n", densidade2);
+printf("O Super Poder da Cidade é de: %.2f \n", superpoder2);
+
+//Área pra comparação das cidades
+printf("População da Carta 1 vs População da Carta 2: %d\n", populacao > populacao2);
+printf("Área da Carta 1 vs Área da Carta 2: %d\n", Area > Area2);
+printf("PIB da Carta 1 vs PIB da Carta 2: %d\n", PIB > PIB2);
+printf("Pontos Turísticos da Carta 1 vs Pontos Turísticos da Carta 2: %d\n", pontosturisticos > pontosturisticos2);
+printf("PIB per capta da Carta 1 vs PIB per capta da Carta 2: %d\n", PPC > PPC2);
+printf("Densidade populacional da Carta 1 vs Densidade populacional da Carta 2: %d\n", densidade1 > densidade2);
+printf("População da Carta 1 vs População da Carta 2: %d\n", populacao > populacao2);
+printf("Super Poder da Carta 1 vs Super Poder da Carta 2: %d\n", superpoder > superpoder2);
 
 return 0;
 
